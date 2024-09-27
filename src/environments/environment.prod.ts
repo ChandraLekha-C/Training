@@ -1,5 +1,5 @@
 export const environment = {
     production: true,
-    apiBaseUrl: 'https://your-production-api-url/api/EmployeeAPI'
+    apiBaseUrl: 'https://localhost:7273/api/EmployeeAPI'
   };
   

@@ -1,10 +1,7 @@
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
+h1 {
     text-align: center;
+    color: #fff;
+    background-color: #573b8a;
+    padding: 20px;
   }
   

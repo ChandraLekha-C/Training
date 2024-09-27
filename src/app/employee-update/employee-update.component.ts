@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { EmployeeService } from '../employee.service';
-import { EmployeeDto } from '../employee.dto';
+import { Component } from '@angular/core';
+import { EmployeeDto } from '../model/employeedto';
+import { CommonModule } from '@angular/common';
+import { EmployeeserviceService } from '../service/employeeservice.service';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
+  standalone:true,
+  imports:[CommonModule,FormsModule],
   selector: 'app-employee-update',
   templateUrl: './employee-update.component.html',
   styleUrls: ['./employee-update.component.css']
 })
-export class EmployeeUpdateComponent implements OnInit {
-  employee: EmployeeDto = {
+
+export class EmployeeUpdateComponent {
+  employeeToUpdate: EmployeeDto = {
     Employee_Id: 0,
     Employee_Name: '',
     Age: 0,
@@ -17,24 +22,15 @@ export class EmployeeUpdateComponent implements OnInit {
     Role: ''
   };
 
+
   constructor(
-    private employeeService: EmployeeService,
-    private route: ActivatedRoute,
+    private employeeService: EmployeeserviceService,
     private router: Router
-  ) { }
+  ) {}
 
-  ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id')!;
-    this.employeeService.getEmployeeById(id).subscribe(
-      data => this.employee = data,
-      error => console.error(error)
-    );
-  }
-
-  updateEmployee(): void {
-    const id = this.employee.Employee_Id;
-    this.employeeService.updateEmployee(id, this.employee).subscribe(
-      () => this.router.navigate(['/employees']),
+  updateEmployee() {
+    this.employeeService.updateEmployee(this.employeeToUpdate).subscribe(
+      response => console.log('Employee updated!', response),
       error => console.error(error)
     );
   }

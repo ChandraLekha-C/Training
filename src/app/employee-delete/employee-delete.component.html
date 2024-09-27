@@ -1,1 +1,17 @@
-<p>employee-delete works!</p>
+<div class="employee-delete">
+    <h1>Delete Employee</h1>
+    
+    <div>
+      <label for="employeeId">Enter Employee ID:</label>
+      <input
+        type="number"
+        id="employeeId"
+        [(ngModel)]="employeeId"
+        placeholder="Employee ID"
+        required
+      />
+    </div>
+  
+    <button (click)="deleteEmployee()">Delete Employee</button>
+  </div>
+  

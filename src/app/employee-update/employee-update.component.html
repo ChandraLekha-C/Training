@@ -1,1 +1,27 @@
-<p>employee-update works!</p>
+<div class="employee-update">
+    <h1>Update Employee</h1>
+    <form (ngSubmit)="updateEmployee()">
+      <div>
+        <label for="id">Employee ID:</label>
+        <input type="number" id="id" [(ngModel)]="employeeToUpdate.Employee_Id" name="id" required>
+      </div>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="employeeToUpdate.Employee_Name" name="name" required>
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" [(ngModel)]="employeeToUpdate.Age" name="age" required>
+      </div>
+      <div>
+        <label for="role">Role:</label>
+        <input type="text" id="role" [(ngModel)]="employeeToUpdate.Role" name="role" required>
+      </div>
+      <div>
+        <label for="departmentId">Department ID:</label>
+        <input type="number" id="departmentId" [(ngModel)]="employeeToUpdate.Department_Id" name="departmentId" required>
+      </div>
+      <button type="submit">Update Employee</button>
+    </form>
+  </div>
+  

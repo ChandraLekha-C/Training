@@ -1,0 +1,99 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#one{
+height :fit-content
+}
+
+.employee_api{
+font-size: 50px;
+padding: 25px;
+}
+
+#two {
+    display: flex;
+    height: 50px;
+    width: 900px;
+    margin: 25px;
+    padding-top:15px;
+    padding-bottom: 5px;
+    font-size: 25px;
+    background-color: lightgreen;
+}
+
+#box1{
+    margin-right: 500px;
+}
+
+#button1{
+    margin-left: 720px; ;
+    font-size:20px;
+}
+
+#three {
+    display: flex;
+    height: 50px;
+    width: 900px;
+    margin: 25px;
+    padding-top:15px;
+    padding-bottom: 5px;
+    font-size: 25px;
+    background-color: lightpink;
+}
+
+#box2{
+    margin-right: 500px;
+}
+
+#button2{
+    margin-left: 700px; ;
+    font-size:20px;
+}
+
+#four {
+    display: flex;
+    height: 50px;
+    width: 900px;
+    margin: 25px;
+    padding-top:15px;
+    padding-bottom: 5px;
+    font-size: 25px;
+    background-color: lightgray;
+}
+
+#box3{
+    margin-right: 500px;
+}
+
+#button3{
+    margin-left: 660px; ;
+    font-size:20px;
+}
+
+#five {
+    display: flex;
+    height: 50px;
+    width: 900px;
+    margin: 25px;
+    padding-top:15px;
+    padding-bottom: 5px;
+    font-size: 25px;
+    background-color: lightskyblue;
+}
+
+#box4{
+    margin-right: 500px;
+}
+
+#button4{
+    margin-left: 660px; ;
+    font-size:20px;
+}

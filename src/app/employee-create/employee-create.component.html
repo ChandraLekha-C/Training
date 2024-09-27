@@ -1,1 +1,23 @@
-<p>employee-create works</p>
+<div class="employee-create">
+    <h1>Create New Employee</h1>
+    <form (ngSubmit)="createEmployee()">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required [(ngModel)]="newEmployee.Employee_Name">
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required [(ngModel)]="newEmployee.Age">
+      </div>
+      <div>
+        <label for="role">Role:</label>
+        <input type="text" id="role" name="role" required [(ngModel)]="newEmployee.Role">
+      </div>
+      <div>
+        <label for="departmentId">Department ID:</label>
+        <input type="number" id="departmentId" name="departmentId" required [(ngModel)]="newEmployee.Department_Id"> 
+      </div>
+      <button type="submit">Create Employee</button>
+    </form>
+  </div>
+  
