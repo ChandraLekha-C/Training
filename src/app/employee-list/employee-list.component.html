@@ -1,16 +1,23 @@
 <div class="employee-list">
-    <h1>Employee List</h1>
-  
-    <div *ngIf="employees.length === 0">No employees found.</div>
-  
-    <ul *ngIf="employees.length > 0">
-      <li *ngFor="let employee of employees">
-        <strong>ID: {{ employee.Employee_Id }}</strong>
-        <p>Name: {{ employee.Employee_Name }}</p>
-        <p>Age: {{ employee.Age }}</p>
-        <p>Role: {{ employee.Role }}</p>
-        <p>Department ID: {{ employee.Department_Id }}</p>
-      </li>
-    </ul>
-  </div>
-  
+  <h1>Employee List</h1>
+
+  <div *ngIf="employees.length === 0">No employees found.</div>
+
+  <ul *ngIf="employees.length > 0">
+    <li *ngFor="let employee of employees">
+      <strong>ID: {{ employee.Employee_Id }}</strong>
+      <p>Name: {{ employee.Employee_Name }}</p>
+      <p>Age: {{ employee.Age }}</p>
+      <p>Role: {{ employee.Role }}</p>
+      <p>Department ID: {{ employee.Department_Id }}</p>
+    </li>
+  </ul>
+</div>
+
+<div id="post">
+  <button routerLink="/create-employee" class="Create"></button>
+</div>
+
+<div id="update">
+  <button routerLink="/update-employee" class="Update"></button>
+</div>

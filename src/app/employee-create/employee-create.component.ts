@@ -28,16 +28,27 @@ export class EmployeeCreateComponent {
 
   createEmployee(): void {
     this.employeeService.createEmployee(this.newEmployee).subscribe(
-      response => {
-        console.log('Employee created!', response);
-        this.newEmployee = { Employee_Id: 0, Employee_Name: '', Age: 0, Department_Id: 0, Role: '' };
-        this.router.navigate(['/list-employee']);
-      },
-      error => console.error(error)
+        response => {
+            console.log('Employee created!', response);
+            this.newEmployee = { Employee_Id: 0, Employee_Name: '', Age: 0, Department_Id: 0, Role: '' };
+            this.router.navigate(['/list-employee']);
+        },
+        error => {
+            console.error(error);
+            alert('Failed to create employee. Please try again.');
+        }
     );
-  }
+}
 
   onSubmit() {
     this.createEmployee();
   }
+ 
+ home(){
+  this.router.navigate(['/home']);
+ }
+
+ get(){
+  this.router.navigate(['/list-employee']);
+ }
 }

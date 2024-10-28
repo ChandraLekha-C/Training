@@ -33,4 +33,12 @@ export class EmployeeDeleteComponent {
       );
     }
   }
+
+  home(){
+    this.router.navigate(['/home']);
+   }
+  
+   get(){
+    this.router.navigate(['/list-employee']);
+   }
 }

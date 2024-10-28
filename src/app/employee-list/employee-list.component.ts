@@ -3,10 +3,11 @@ import { EmployeeDto } from '../model/employeedto';
 import { CommonModule } from '@angular/common';
 import { EmployeeserviceService } from '../service/employeeservice.service';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   standalone: true,
-  imports:[CommonModule],
+  imports: [CommonModule, FormsModule],
   selector: 'app-employee-list',
   templateUrl: 'employee-list.component.html',
   styleUrls: ['./employee-list.component.css']
@@ -21,8 +22,13 @@ export class EmployeeListComponent implements OnInit {
   
   ngOnInit(): void {
     this.employeeService.getEmployees().subscribe(
-      data => this.employees = data,
-      error => console.error(error)
+      data => {
+        console.log('Fetched employees:', data); 
+        this.employees = data;
+      },
+      error => {
+        console.error('Error fetching employees:', error);
+      }
     );
   }
 }

@@ -1,26 +1,25 @@
 <div class="container">
-    <div id="one">
+    <div id="main">
         <h1 class="employee_api">Employee API</h1>
     </div>
     
-    <div id="two">
+    <div id="get">
         <div id="box1">List Employees</div>
-        <button id="button1"(click)="GET()">Fetch Employee</button>
-
+        <a routerLink="/list-employee" class="btn">GET</a>
     </div>
 
-    <div id="three">
+    <div id="post">
         <div id="box2">Create Employee</div>
-        <button id="button2"(click)="POST()">Add Employee</button>
+        <a routerLink="/create-employee" class="btn">POST</a>
     </div>
 
-    <div id="four">
+    <div id="update">
         <div id="box3">Update Employee</div>
-        <button id="button3"(click)="PUT()">Update Info</button>
+        <a routerLink="/update-employee" class="btn">UPDATE</a>
     </div>
 
-    <div id="five">
+    <div id="remove">
         <div id="box4">Delete Employee</div>
-        <button id="button4"(click)="DELETE()">Remove Employee</button>
+        <a routerLink="/delete-employee" class="btn">DELETE</a>
     </div>
 </div>

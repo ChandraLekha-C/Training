@@ -22,7 +22,6 @@ export class EmployeeUpdateComponent {
     Role: ''
   };
 
-
   constructor(
     private employeeService: EmployeeserviceService,
     private router: Router
@@ -34,4 +33,12 @@ export class EmployeeUpdateComponent {
       error => console.error(error)
     );
   }
+
+  home(){
+    this.router.navigate(['/home']);
+   }
+  
+   get(){
+    this.router.navigate(['/list-employee']);
+   }
 }
